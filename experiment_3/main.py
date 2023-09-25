@@ -30,6 +30,7 @@ def longest_common_subsequences(X, Y):
                 dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])
     
     all_lcs = find_all_lcs(X, Y, m, n, dp)
+
     return dp[m][n], all_lcs
 
 if __name__ == "__main__":
@@ -48,3 +49,4 @@ if __name__ == "__main__":
         print(f"{length} LCS(X,Y):")
         for lcs in lcs_list:
             print(" ".join(lcs))
+        print()
